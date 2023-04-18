@@ -15,142 +15,182 @@ let nine = document.getElementById('nine')
 let zero = document.getElementById('zero')
 let clear = document.getElementById('clear');
 let numberText = document.getElementById('numberText')
-let firstNumber = 0;
-let secondNumber = 0;
+let firstNumber = '';
+let secondNumber = '';
 let set = false;
 let divideSet = false;
 let multiplySet = false;
 let subtractSet = false;
 let addSet = false;
 let answer;
-let shown = 0;
+let total = '';
+let total2 = '';
+
 
 zero.addEventListener('click', function(e){
-    numberText.value = 0;
     if (set)
     {
-        secondNumber = 0;
+        secondNumber += '0';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 0;
+        firstNumber += '0';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+    
     
 });
 one.addEventListener('click', function(e){
-    numberText.value = 1;
     if (set)
     {
-        secondNumber = 1;
+        secondNumber += '1';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 1;
+        firstNumber += '1';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+    
     
 });
 two.addEventListener('click', function(e){
-    numberText.value = 2;
     if (set)
     {
-        secondNumber = 2;
+        secondNumber += '2';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 2;
+        firstNumber += '2';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
 
 });
 three.addEventListener('click', function(e){
-    numberText.value = 3;
     if (set)
     {
-        secondNumber = 3;
+        secondNumber += '3';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 3;
+        firstNumber += '3';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+   
 
 });
 four.addEventListener('click', function(e){
-    numberText.value = 4;
     if (set)
     {
-        secondNumber = 4;
+        secondNumber += '4';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 4;
+        firstNumber += '4';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+  
 
 });
 five.addEventListener('click', function(e){
-    numberText.value = 5;
     if (set)
     {
-        secondNumber = 5;
+        secondNumber += '5';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 5;
+        firstNumber += '5';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
 
 });
 six.addEventListener('click', function(e){
-    numberText.value = 6;
     if (set)
     {
-        secondNumber = 6;
+        secondNumber += '6';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 6;
+        firstNumber += '6';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+    
 
 });
 seven.addEventListener('click', function(e){
-    numberText.value = 7;
     if (set)
     {
-        secondNumber = 7;
+        secondNumber += '7';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 7;
+        firstNumber += '7';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+    
 
 
 });
 eight.addEventListener('click', function(e){
-    numberText.value = 8;
     if (set)
     {
-        secondNumber = 8;
+        secondNumber += '8';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 8;
+        firstNumber += '8';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+
 
 
 });
 nine.addEventListener('click', function(e){
-    numberText.value = 9;
     if (set)
     {
-        secondNumber = 9;
+        secondNumber += '9';
+        total2 = parseInt(secondNumber);
+        numberText.value = total2;
     }
     else
     {
-        firstNumber = 9;
+        firstNumber += '9';
+        total = parseInt(firstNumber);
+        numberText.value = total;
     }
+    
 
 });
 
 clear.addEventListener('click', function(e){
-    firstNumber = 0;
-    secondNumber = 0;
+    firstNumber = '';
+    secondNumber = '';
     set = false;
     addSet = false;
     divideSet = false;
@@ -194,22 +234,22 @@ add.addEventListener('click', function(e){
 equals.addEventListener('click', function(e){
     if(divideSet)
     {
-        numberText.value = firstNumber / secondNumber;
+        numberText.value = total / total2;
     }
     else if (multiplySet)
     {
-        numberText.value = firstNumber * secondNumber;
+        numberText.value = total * total2;
     }
     else if (subtractSet)
     {
-        numberText.value = firstNumber - secondNumber;
+        numberText.value = total - total2;
     }
     else if (addSet)
     {
-        numberText.value = firstNumber + secondNumber;
+        numberText.value = parseFloat(firstNumber) + parseFloat(secondNumber);
     }
-    firstNumber = 0;
-    secondNumber = 0;
+    firstNumber = '';
+    secondNumber = '';
     set = false;
     addSet = false;
     divideSet = false;
