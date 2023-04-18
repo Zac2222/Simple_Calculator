@@ -13,6 +13,7 @@ let seven = document.getElementById('seven')
 let eight = document.getElementById('eight')
 let nine = document.getElementById('nine')
 let zero = document.getElementById('zero')
+let clear = document.getElementById('clear');
 let numberText = document.getElementById('numberText')
 let firstNumber = 0;
 let secondNumber = 0;
@@ -22,8 +23,9 @@ let multiplySet = false;
 let subtractSet = false;
 let addSet = false;
 let answer;
+let shown = 0;
 
-one.addEventListener('click', function(e){
+zero.addEventListener('click', function(e){
     numberText.value = 0;
     if (set)
     {
@@ -144,6 +146,17 @@ nine.addEventListener('click', function(e){
         firstNumber = 9;
     }
 
+});
+
+clear.addEventListener('click', function(e){
+    firstNumber = 0;
+    secondNumber = 0;
+    set = false;
+    addSet = false;
+    divideSet = false;
+    multiplySet = false;
+    subtractSet = false;
+    numberText.value = '';
 });
 
 divide.addEventListener('click', function(e){
