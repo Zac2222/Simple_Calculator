@@ -26,6 +26,7 @@ let answer;
 let total = '';
 let total2 = '';
 
+//surely there is a better way to make this, but i am happy with how it turned out so :)
 
 zero.addEventListener('click', function(e){
     if (set)
