@@ -28,6 +28,8 @@ let total2 = '';
 
 //surely there is a better way to make this, but i am happy with how it turned out so :)
 
+//also note, the calculator can do any two numbers together, any amount of digits, but resets after clicking equals, so you can't continue adding on after. (this message will not be here if i figured out how to do it hopefully)
+
 zero.addEventListener('click', function(e){
     if (set)
     {

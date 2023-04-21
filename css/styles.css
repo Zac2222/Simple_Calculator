@@ -5,3 +5,24 @@ body{
     color: azure;
 }
 
+.btn{
+    border-color: black;
+    width: 50px;
+}
+
+.form-control{
+    width: 217px;
+    background-color: #e790ff;
+    border-color: black;
+}
+
+#box{ 
+    margin-top: 290px;/*could not get centering to work with align items or justify content for some reason */
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 250px;
+    height: 230px;
+    background-image: linear-gradient(to bottom left,blueviolet, pink);
+    
+
+}
